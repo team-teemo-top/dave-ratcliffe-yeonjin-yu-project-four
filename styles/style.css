@@ -2,8 +2,8 @@ h1 {
   color: teal;
 }
 
-.testImg {
-  width: 300px;
-  -webkit-filter: blur(2px) contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
-          filter: blur(2px) contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
+.pokeImg {
+  width: 200px;
+  -webkit-filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
+          filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
 }

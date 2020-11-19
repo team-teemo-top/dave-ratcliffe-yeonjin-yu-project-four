@@ -2,6 +2,7 @@
 
 //(Access)access pokemon api
 
+
 //[select](//select) random generation 1 pokemon to display on the screen
 
 //st](//stlye)yle png to create silhouette
@@ -28,3 +29,29 @@
 // make timer and display/lives
 
 // have landing page animated with text sliding in and "who's that pokemon" sound
+
+
+
+// Javascript
+
+// app object
+const pokeQuiz = {};
+
+// url
+pokeQuiz.apiUrl = 'https://pokeapi.co/api/v2/';
+
+// function that will make request for pokemon information
+pokeQuiz.pokeInfo = () => {
+    $.ajax({
+        url: 'https://pokeapi.co/api/v2/pokemon/10',
+        method: 'GET',
+        dataType: 'json'
+    }).then((pokemon) => {
+        const displayPokemon = pokemon.sprites.front_default;
+        $('.pokeImg').attr('src', displayPokemon);
+    });
+
+};
+pokeQuiz.pokeInfo();
+
+
