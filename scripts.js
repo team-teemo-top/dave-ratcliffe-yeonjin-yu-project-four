@@ -60,7 +60,7 @@ pokeQuiz.badge = [];
 
 
 //pokemon submisson click event 
-pokeQuiz.revealPokemon = $('.reveal').on('click', (e) => {
+pokeQuiz.nextPokemon = $('.nextPokemon').on('click', (e) => {
     e.preventDefault();
     pokeQuiz.questionCounter++;
     console.log(pokeQuiz.questionCounter)
@@ -69,26 +69,30 @@ pokeQuiz.revealPokemon = $('.reveal').on('click', (e) => {
         $('h1').html('you finished');
     }
 })
-pokeQuiz.clickCorrect = $('.correct').on('click', (e) => {
+pokeQuiz.dataRetrieve = function (pokemon) {
+    pokeQuiz.clickCorrect = $('.correct').on('click', (e) => {
     e.preventDefault();
+    $('#shake').removeClass('animate__shakeX');
     const lowercasePoke = $('.textBox').val().toLowerCase();
-    // if ($('.textBox').val() === pokeQuiz.pokeInfo.pokemon.name) {
-    //         console.log("you're right")
-    //     }else{
-    //         console.log("that's not the right pokemon you dumby")
-    //     }
-    $('.pokeImg').removeClass('shadow');
-})
+    if (lowercasePoke === pokemon.name) {
+        $('.nextPokemon').css('visibility', 'visible');
+            console.log("you're right")
+            $('.pokeImg').removeClass('shadow');
+        }else{
+            $('#shake').addClass('animate__shakeX');
+            console.log("that's not the right pokemon you dummy")
+        }
+});
 pokeQuiz.clickPass = $('.pass').on('click', (e) => {
     e.preventDefault();
     const lowercasePoke = $('.textBox').val().toLowerCase();
-    // if ($('.textBox').val() === pokeQuiz.pokeInfo.pokemon.name) {
-    //         console.log("you're right")
-    //     }else{
-    //         console.log("that's not the right pokemon you dumby")
-    //     }
+    $('.nextPokemon').css('visibility', 'visible');
+    console.log('this is the pass button')
     $('.pokeImg').removeClass('shadow');
-})
+});
+}
+
+
 // url
 pokeQuiz.apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 pokeQuiz.pokeRandomizer = Math.floor(Math.random() * 151) + 1;
@@ -102,6 +106,7 @@ pokeQuiz.pokeInfo = (pokeRandom) => {
         const displayPokemon = pokemon.sprites.front_default;
         pokeQuiz.name = pokemon.name
         $('.pokeImg').attr('src', displayPokemon);
+        pokeQuiz.dataRetrieve(pokemon);
     });
 
 console.log(pokeQuiz.pokeRandomizer);
