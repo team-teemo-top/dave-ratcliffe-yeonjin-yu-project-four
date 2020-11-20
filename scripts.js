@@ -51,7 +51,7 @@
 // how would you go about getting the badges on the screen. Would you use an array and append or just toggle classes with visibility 
 
 
-
+//testing
 
 
 // app object
