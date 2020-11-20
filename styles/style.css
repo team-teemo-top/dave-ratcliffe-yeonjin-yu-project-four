@@ -3,7 +3,12 @@ h1 {
 }
 
 .pokeImg {
-  width: 200px;
+  width: 250px;
+  -webkit-filter: drop-shadow(8px 8px 3px #3b3b3b);
+          filter: drop-shadow(8px 8px 3px #3b3b3b);
+}
+
+.shadow {
   -webkit-filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
           filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
 }

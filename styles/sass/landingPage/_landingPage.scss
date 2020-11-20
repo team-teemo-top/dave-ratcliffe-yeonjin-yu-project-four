@@ -3,6 +3,9 @@ h1 {
 }
 
 .pokeImg {
-    width: 200px;
-    filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
+    width: 250px;
+    filter: drop-shadow(8px 8px 3px rgb(59, 59, 59));
+}
+.shadow {
+    filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue)
 }

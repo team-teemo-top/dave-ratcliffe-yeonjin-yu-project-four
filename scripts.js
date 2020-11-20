@@ -1,16 +1,16 @@
 // make a button allowing you to start the quiz
 
-//(Access)access pokemon api
+//access pokemon api
 
 
-//[select](//select) random generation 1 pokemon to display on the screen
+//select random generation 1 pokemon to display on the screen
 
-//st](//stlye)yle png to create silhouette
+//style png to create silhouette
 
 
-// / creat) /make textform for people to submit answer
+// make textform for people to submit answer
 
-//allow](//allow) player to submit when hitting enter
+//allow player to submit when hitting enter
 
 // use prevent default so the page doesn't refresh
 
@@ -20,7 +20,7 @@
 
 // create "Idk, blasting off again" button so they can skip to the next pokemon if they don't know the answer
 
-//cycle](//cycle) to next pokemon when answered
+//cycle to next pokemon when answered
 
 // Stretch goal:
 
@@ -30,28 +30,87 @@
 
 // have landing page animated with text sliding in and "who's that pokemon" sound
 
-
+//load pokemon on start
+//if correct reveal pokemon and display badge
+//prevent default on form
+//display next button to reveal the next pokemon
+//if incorrect nothing changes
+// if skipped revel pokemon but no badge given and next button appers to go on to the next pokemon
+//clear page and rerun ajax
+// make an array so the badges are displayed
+// use a for each diplay the nadge indvidually with each point
+// make a limit of 8 rounds before the game ends
+// notify game has ended and create a replay button 
+//global counter property 
 
 // Javascript
 
+
+//questions 
+// how to get the value from the ajax into the event callback function
+// how would you go about getting the badges on the screen. Would you use an array and append or just toggle classes with visibility 
+
+
+
+
+
 // app object
 const pokeQuiz = {};
+pokeQuiz.badge = [];
 
+
+//pokemon submisson click event 
+pokeQuiz.revealPokemon = $('.reveal').on('click', (e) => {
+    e.preventDefault();
+    pokeQuiz.questionCounter++;
+    console.log(pokeQuiz.questionCounter)
+    if (pokeQuiz.questionCounter === 8) {
+        console.log('the game is over')
+        $('h1').html('you finished');
+    }
+})
+pokeQuiz.clickCorrect = $('.correct').on('click', (e) => {
+    e.preventDefault();
+    const lowercasePoke = $('.textBox').val().toLowerCase();
+    // if ($('.textBox').val() === pokeQuiz.pokeInfo.pokemon.name) {
+    //         console.log("you're right")
+    //     }else{
+    //         console.log("that's not the right pokemon you dumby")
+    //     }
+    $('.pokeImg').removeClass('shadow');
+})
+pokeQuiz.clickPass = $('.pass').on('click', (e) => {
+    e.preventDefault();
+    const lowercasePoke = $('.textBox').val().toLowerCase();
+    // if ($('.textBox').val() === pokeQuiz.pokeInfo.pokemon.name) {
+    //         console.log("you're right")
+    //     }else{
+    //         console.log("that's not the right pokemon you dumby")
+    //     }
+    $('.pokeImg').removeClass('shadow');
+})
 // url
-pokeQuiz.apiUrl = 'https://pokeapi.co/api/v2/';
-
+pokeQuiz.apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+pokeQuiz.pokeRandomizer = Math.floor(Math.random() * 151) + 1;
 // function that will make request for pokemon information
-pokeQuiz.pokeInfo = () => {
+pokeQuiz.pokeInfo = (pokeRandom) => {
     $.ajax({
-        url: 'https://pokeapi.co/api/v2/pokemon/10',
+        url: `${pokeQuiz.apiUrl}${pokeRandom}`,
         method: 'GET',
         dataType: 'json'
     }).then((pokemon) => {
         const displayPokemon = pokemon.sprites.front_default;
+        pokeQuiz.name = pokemon.name
         $('.pokeImg').attr('src', displayPokemon);
     });
 
+console.log(pokeQuiz.pokeRandomizer);
 };
-pokeQuiz.pokeInfo();
 
-
+pokeQuiz.init = () => {
+pokeQuiz.pokeInfo(pokeQuiz.pokeRandomizer);
+pokeQuiz.questionCounter = 0;
+}
+$(function () {
+  pokeQuiz.init();
+});
