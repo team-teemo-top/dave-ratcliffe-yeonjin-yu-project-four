@@ -9,3 +9,12 @@ h1 {
 .shadow {
     filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue)
 }
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__shakeX {
+  --animate-duration: .2s;
+}
+
+.nextPokemon {
+    visibility: hidden;
+}
