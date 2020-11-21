@@ -69,12 +69,12 @@ pokeQuiz.nextPokemon = $('.nextPokemon').on('click', (e) => {
         $('h1').html('you finished');
     }
 })
-pokeQuiz.dataRetrieve = function (pokemon) {
+
     pokeQuiz.clickCorrect = $('.correct').on('click', (e) => {
     e.preventDefault();
     const lowercasePoke = $('.textBox').val().toLowerCase();
-    console.log(pokemon.name)
-    if (lowercasePoke === pokemon.name) {
+    console.log(pokeQuiz.name)
+    if (lowercasePoke === pokeQuiz.name) {
         $('.nextPokemon').css('visibility', 'visible');
             console.log("you're right")
             $('.pokeImg').removeClass('shadow');
@@ -89,22 +89,21 @@ pokeQuiz.clickPass = $('.pass').on('click', (e) => {
     console.log('this is the pass button')
     $('.pokeImg').removeClass('shadow');
 });
-}
+
 pokeQuiz.clickNext = $('.nextPokemon').on('click', (e) => {
     e.preventDefault();
     $('.textBox').val('');
-    pokeQuiz.pokeRandomizer = Math.floor(Math.random() * 151) + 1;
     $('.pokeImg').addClass('shadow');
-    pokeQuiz.pokeInfo(pokeQuiz.pokeRandomizer);
+    pokeQuiz.pokeInfo();
     $('.nextPokemon').css('visibility', 'hidden');
 })
 
 // url
 pokeQuiz.apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
-pokeQuiz.pokeRandomizer = Math.floor(Math.random() * 151) + 1;
 // function that will make request for pokemon information
-pokeQuiz.pokeInfo = (pokeRandom) => {
+pokeQuiz.pokeInfo = () => {
+    const pokeRandom = Math.floor(Math.random() * 151) + 1;
     $.ajax({
         url: `${pokeQuiz.apiUrl}${pokeRandom}`,
         method: 'GET',
@@ -113,14 +112,13 @@ pokeQuiz.pokeInfo = (pokeRandom) => {
         const displayPokemon = pokemon.sprites.front_default;
         pokeQuiz.name = pokemon.name
         $('.pokeImg').attr('src', displayPokemon);
-        pokeQuiz.dataRetrieve(pokemon);
+        console.log(pokeRandom);
     });
 
-console.log(pokeQuiz.pokeRandomizer);
 };
 
 pokeQuiz.init = () => {
-pokeQuiz.pokeInfo(pokeQuiz.pokeRandomizer);
+pokeQuiz.pokeInfo();
 pokeQuiz.questionCounter = 0;
 }
 $(function () {

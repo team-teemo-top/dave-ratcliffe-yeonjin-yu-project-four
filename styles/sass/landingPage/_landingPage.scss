@@ -18,3 +18,6 @@ h1 {
 .nextPokemon {
     visibility: hidden;
 }
+.badgeShadow {
+    filter: contrast(70%) brightness(30%);
+}
