@@ -1,5 +1,9 @@
+body {
+    background-color: $bgPink;
+}
+
 h1 {
-    color: teal;
+    color: $yellow;
 }
 
 .pokeImg {
@@ -11,9 +15,9 @@ h1 {
 }
 
 /* This only changes this particular animation duration */
-.animate__animated.animate__shakeX {
-  --animate-duration: .2s;
-}
+// .animate__animated.animate__headShake {
+//   --animate-duration: .1s;
+// }
 
 .nextPokemon {
     visibility: hidden;

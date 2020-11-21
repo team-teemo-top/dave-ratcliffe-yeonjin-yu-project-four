@@ -1,2 +1,22 @@
 @import 'landingPage/landingPage';
 
+@import 'utilities/global';
+@import 'utilities/mixins';
+@import 'utilities/snippets';
+@import 'utilities/variables';
+
+@import 'index/index';
+
+@import 'quiz/quiz';
+
+@import 'pokemonMaster/pokemonMaster';
+
+@import 'notMaster/notMaster';
+
+@import 'mediaQuery/footerMQ';
+@import 'mediaQuery/landingPageMQ';
+@import 'mediaQuery/notMasterMQ';
+@import 'mediaQuery/pokemonMasterMQ';
+@import 'mediaQuery/quizMQ';
+
+@import 'footer/footer';
