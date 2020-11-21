@@ -9,30 +9,37 @@ body {
   background-color: #e36761;
 }
 
-h1 {
+body h1 {
   color: #f2f08b;
+  font-size: 6rem;
   font-family: Pokemon, fantasy;
   letter-spacing: 3px;
-  text-shadow: 3px 3px 0px  #3b4cca;
+  text-shadow: 10px 10px 0px #3b4cca;
 }
 
-.pokeImg {
+body .pokeImg {
   width: 250px;
   -webkit-filter: drop-shadow(8px 8px 3px #3b3b3b);
           filter: drop-shadow(8px 8px 3px #3b3b3b);
 }
 
-.shadow {
-  -webkit-filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
-          filter: contrast(0%) brightness(0%) drop-shadow(8px 8px 0px blue);
+body .shadow {
+  -webkit-filter: contrast(0%) brightness(0%);
+          filter: contrast(0%) brightness(0%);
 }
 
-/* This only changes this particular animation duration */
-.nextPokemon {
+body .nextPokemon {
   visibility: hidden;
 }
 
-.badgeShadow {
+body .badges ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .badgeShadow {
   -webkit-filter: contrast(50%) brightness(20%);
           filter: contrast(50%) brightness(20%);
 }
