@@ -130,6 +130,7 @@ pokeQuiz.clickNext = $('.nextPokemon').on('click', (e) => {
     // Hide the next pokemon once new pokemon loads
     $('.nextPokemon').css('visibility', 'hidden');
     $('.buttonhide').css('display', 'initial');
+    $('.pokemonAnswer').html('');
 });
 
 
