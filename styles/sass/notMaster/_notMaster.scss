@@ -3,41 +3,23 @@ body.notMasterBody {
 }
 
 div.notMaster {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    @include resultWrapper;
     h1 {
         -webkit-text-stroke: 2px #3b4cca;
     }
+    img.pikachu {
+        width: 30rem;
+    }
     p {
-        font-family: 'Nerko One', cursive;
-        color: $blueGrey;
-        font-size: 4rem;
-        letter-spacing: 0px;
-        line-height: 0px;
-        text-shadow: none;
-        font-weight: 400;
+        @include resultP;
     }
     p:nth-child(3) {
         margin-bottom: 0;
     }
     a.tryAgain {
-        text-align: center;
-        text-decoration: none;
-        background-color: $pokeYellow;
-        color: $pokeBlue;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 800;
-        font-size: 40px;
-        padding: 30px 30px;
-        letter-spacing: 3px;
-        width: 37%;
-        // margin-bottom: -13rem;
+        @include tryAgain;
     }
     a.tryAgain:hover {
-        background-color: $pokeBlue;
-        color: $pokeYellow;
+        @include tryAgainHover;
     }
 }

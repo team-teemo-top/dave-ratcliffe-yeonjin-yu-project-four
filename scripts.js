@@ -37,6 +37,7 @@ pokeQuiz.clickCorrect = $('.submit').on('click', (e) => {
         $(`#${pokeQuiz.questionCounter}`).removeClass('badgeShadow');
         $('.buttonhide').css('display', 'none');
         $('.pokemonAnswer').html(pokeQuiz.name + '!!!');
+        $('.textBox').css('visibility', 'hidden');
         
         
         // If answer is wrong:
@@ -55,6 +56,7 @@ pokeQuiz.clickPass = $('.pass').on('click', (e) => {
     // Reveals the pokemon img and the pokemon name
     $('.nextPokemon').css('visibility', 'visible');
     $('.buttonhide').css('display', 'none');
+    $('.textBox').css('visibility', 'hidden');
     console.log('this is the pass button')
     $('.pokeImg').removeClass('shadow');
     $('.pokemonAnswer').html(pokeQuiz.name + '!!!');
@@ -73,6 +75,7 @@ pokeQuiz.clickNext = $('.nextPokemon').on('click', (e) => {
     pokeQuiz.pokeInfo();
     // Hide the next pokemon once new pokemon loads
     $('.nextPokemon').css('visibility', 'hidden');
+    $('.textBox').css('visibility', 'visible');
     $('.buttonhide').css('display', 'initial');
     $('.pokemonAnswer').html('');
 });
