@@ -10,7 +10,7 @@ div.master {
     p {
         @include resultP;
     }
-    img:nth-child(2) {
+    img.congratulations {
         width: 30rem;
     }
     img:nth-child(3) {
@@ -20,6 +20,9 @@ div.master {
     }
     p:nth-child(4) {
         margin-bottom: 0;
+    }
+    p:nth-child(5) {
+        margin-top: 0;
     }
     a.tryAgain {
         @include tryAgain;
