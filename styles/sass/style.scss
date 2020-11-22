@@ -3,6 +3,8 @@
 @import 'utilities/snippets';
 @import 'utilities/variables';
 
+
+
 @import 'index/index';
 
 @import 'quiz/quiz';
@@ -11,10 +13,10 @@
 
 @import 'notMaster/notMaster';
 
+@import 'footer/footer';
+
 @import 'mediaQuery/footerMQ';
 @import 'mediaQuery/landingPageMQ';
 @import 'mediaQuery/notMasterMQ';
 @import 'mediaQuery/pokemonMasterMQ';
 @import 'mediaQuery/quizMQ';
-
-@import 'footer/footer';

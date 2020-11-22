@@ -2,13 +2,13 @@ body.indexBody {
     background-image: radial-gradient(circle, $bgPinkLight 0%, $bgPink 80%);
 }
 
-header.indexHeader {
+main.indexMain {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 3rem;
     h1 {
         color: $yellow;
         font-family: Pokemon, fantasy;
