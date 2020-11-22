@@ -1,6 +1,5 @@
 body.indexBody {
     background-image: radial-gradient(circle, $bgPinkLight 0%, $bgPink 80%);
-    height: 100vh;
 }
 
 header.indexHeader {
@@ -9,6 +8,7 @@ header.indexHeader {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     h1 {
         color: $yellow;
         font-family: Pokemon, fantasy;
@@ -25,7 +25,7 @@ header.indexHeader {
         font-family: $qSand;
         font-size: 30px;
         font-weight: 800;
-        width: 32%;
+        width: 35rem;
         color: $blueGrey;
     }
     img.badges {
@@ -43,7 +43,7 @@ header.indexHeader {
         font-size: 40px;
         padding: 30px 30px;
         letter-spacing: 3px;
-        width: 37%;
+        width: 35rem;
         // margin-bottom: -13rem;
     }
     a.goQuiz:hover {
