@@ -1,10 +1,27 @@
+body.notMasterBody {
+    background-image: radial-gradient(circle, $blue 0%, $blueGrey 80%);
+}
+
 div.notMaster {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     h1 {
-        font-family: $qSand;
+        -webkit-text-stroke: 2px #3b4cca;
+    }
+    p {
+        font-family: 'Nerko One', cursive;
+        color: $blueGrey;
+        font-size: 4rem;
+        letter-spacing: 0px;
+        line-height: 0px;
+        text-shadow: none;
+        font-weight: 400;
+    }
+    p:nth-child(3) {
+        margin-bottom: 0;
     }
     a.tryAgain {
         text-align: center;
