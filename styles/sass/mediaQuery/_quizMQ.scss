@@ -1,0 +1,12 @@
+@media screen and (max-width: 1400px) {
+  .pokemonAnswer {
+  font-size: 4rem;
+}
+}
+
+@media screen and (max-width: 1090px) {
+  .contentFlex {
+    flex-direction: column;
+    align-items: center;
+  }
+}

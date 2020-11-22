@@ -2,7 +2,7 @@ body {
   background-color: $bgPink;
   h1 {
     color: $yellow;
-    font-size: 6rem;
+    font-size: 7rem;
     font-family: Pokemon, fantasy;
     letter-spacing: 6px;
     text-shadow: 10px 10px 0px #3b4cca;
@@ -11,15 +11,20 @@ body {
   .contentFlex {
     display: flex;
     justify-content: space-between;
+    gap: 100px;
   }
   .pokemonAndBadges {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .badges {
-      max-width: 400px;
+      max-width: 450px;
       ul {
         padding: 0;
         li {
           width: calc(100% / 8);
+          min-width: 56.25px;
         }
       }
     }
@@ -28,16 +33,17 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    align-items: start;
   }
   .pokemonContainer {
     background: white;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 35px solid $blue;
+    border: 45px solid $blue;
   }
   .pokeImg {
     width: 250px;
@@ -78,8 +84,11 @@ h2 {
   text-shadow: 5px 5px 0px #3b4cca;
   -webkit-text-stroke: 3px #3b4cca;
   margin: 0;
+  margin-bottom: 70px;
 }
-
+.its {
+  margin-top: 20px;
+}
 .pokemonAnswer {
   text-transform: capitalize;
   font-size: 5rem;
