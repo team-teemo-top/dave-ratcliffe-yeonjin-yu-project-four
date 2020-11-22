@@ -318,7 +318,7 @@ body h1 {
   color: #f2f08b;
   font-size: 6rem;
   font-family: Pokemon, fantasy;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
   text-shadow: 10px 10px 0px #3b4cca;
 }
 
@@ -421,7 +421,7 @@ button {
 
 .textBox {
   padding: 15px;
-  width: 173px;
+  width: 203px;
   height: 50;
   font-size: 1.6rem;
   text-align: center;
