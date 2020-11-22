@@ -25,4 +25,67 @@ body {
   .badgeShadow {
     filter: contrast(50%) brightness(20%);
   }
+<<<<<<< HEAD
+=======
+}
+body {
+  background-color: $bgPink;
+}
+h1 {
+    color: $yellow;
+    font-size: 6rem;
+    font-family: Pokemon, fantasy;
+    letter-spacing: 6px;
+    text-shadow: 10px 10px 0px #3b4cca;
+    -webkit-text-stroke: 7px #3b4cca;
+  }
+  h2 {
+      display: inline-block;
+    color: $yellow;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    font-family: Pokemon, fantasy;
+    text-shadow: 5px 5px 0px #3b4cca;
+    -webkit-text-stroke: 3px #3b4cca;
+  }
+  .answerContainer {
+      display: flex;
+      gap: 10px;
+      .pokemonAnswer {
+          text-transform: capitalize;
+      }
+  }
+  .pokeImg {
+    width: 250px;
+    filter: drop-shadow(8px 8px 3px rgb(59, 59, 59));
+  }
+  .shadow {
+    filter: contrast(0%) brightness(0%);
+  }
+  .nextPokemon {
+    visibility: hidden;
+  }
+  .badges ul {
+      list-style: none;
+      display: flex;
+  }
+  .badgeShadow {
+    filter: contrast(50%) brightness(20%);
+  }
+  button {
+  padding: 15px;
+  border: none;
+  background-color: #f2f08b;
+  color: #343239;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.6rem;
+}
+.textBox {
+    padding: 15px;
+    width: 203px;
+    height: 50;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 10px;
+>>>>>>> master
 }

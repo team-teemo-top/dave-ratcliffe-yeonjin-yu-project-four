@@ -349,6 +349,7 @@ body .badgeShadow {
           filter: contrast(50%) brightness(20%);
 }
 
+<<<<<<< HEAD
 body.masterBody {
   background-image: radial-gradient(circle, #f2f08b 0%, #e36761 80%);
 }
@@ -414,6 +415,85 @@ div.master a.tryAgain:hover {
 
 body.notMasterBody {
   background-image: radial-gradient(circle, #99d8eb 0%, #343239 80%);
+=======
+body {
+  background-color: #e36761;
+}
+
+h1 {
+  color: #f2f08b;
+  font-size: 6rem;
+  font-family: Pokemon, fantasy;
+  letter-spacing: 6px;
+  text-shadow: 10px 10px 0px #3b4cca;
+  -webkit-text-stroke: 7px #3b4cca;
+}
+
+h2 {
+  display: inline-block;
+  color: #f2f08b;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  font-family: Pokemon, fantasy;
+  text-shadow: 5px 5px 0px #3b4cca;
+  -webkit-text-stroke: 3px #3b4cca;
+}
+
+.answerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.answerContainer .pokemonAnswer {
+  text-transform: capitalize;
+}
+
+.pokeImg {
+  width: 250px;
+  -webkit-filter: drop-shadow(8px 8px 3px #3b3b3b);
+          filter: drop-shadow(8px 8px 3px #3b3b3b);
+}
+
+.shadow {
+  -webkit-filter: contrast(0%) brightness(0%);
+          filter: contrast(0%) brightness(0%);
+}
+
+.nextPokemon {
+  visibility: hidden;
+}
+
+.badges ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.badgeShadow {
+  -webkit-filter: contrast(50%) brightness(20%);
+          filter: contrast(50%) brightness(20%);
+}
+
+button {
+  padding: 15px;
+  border: none;
+  background-color: #f2f08b;
+  color: #343239;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.6rem;
+}
+
+.textBox {
+  padding: 15px;
+  width: 203px;
+  height: 50;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 10px;
+>>>>>>> master
 }
 
 div.notMaster {
