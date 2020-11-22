@@ -1,0 +1,53 @@
+body.indexBody {
+    background-image: radial-gradient(circle, $bgPinkLight 0%, $bgPink 80%);
+    height: 100vh;
+}
+
+header.indexHeader {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: $yellow;
+        font-family: Pokemon, fantasy;
+        letter-spacing: 10px;
+        -webkit-text-stroke: 2px $pokeBlue;
+        text-shadow: 8px 5px 0px $pokeBlue;
+        margin-top: 4rem;
+    }
+    img.pokemonLogo {
+        width: 800px;
+        margin-top: -4rem;
+    }
+    p {
+        font-family: $qSand;
+        font-size: 30px;
+        font-weight: 800;
+        width: 32%;
+        color: $blueGrey;
+    }
+    img.badges {
+        width: 500px;
+        filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
+        margin-top: 2rem;
+    }
+    // The anchor button:
+    a.goQuiz {
+        text-decoration: none;
+        background-color: $pokeYellow;
+        color: $pokeBlue;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 30px 30px;
+        letter-spacing: 3px;
+        width: 37%;
+        // margin-bottom: -13rem;
+    }
+    a.goQuiz:hover {
+        background-color: $pokeBlue;
+        color: $pokeYellow;
+    }
+}
