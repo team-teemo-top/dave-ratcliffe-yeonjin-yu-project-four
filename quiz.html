@@ -17,22 +17,22 @@
     <div class="wrapper">
         <header>
             <h1>Who's that Pokemon?</h1>
-
-            <!-- Badges to indicate the scores -->
-            <div class="badges">
-                <ul>
-                    <li id="1" class="badgeShadow"><img src="./assets/badge1.png" alt=""></li>
-                    <li id="2" class="badgeShadow"><img src="./assets/badge2.png" alt="badge 2"></li>
-                    <li id="3" class="badgeShadow"><img src="./assets/badge3.png" alt="badge 3"></li>
-                    <li id="4" class="badgeShadow"><img src="./assets/badge4.png" alt=""></li>
-                    <li id="5" class="badgeShadow"><img src="./assets/badge5.png" alt=""></li>
-                    <li id="6" class="badgeShadow"><img src="./assets/badge6.png" alt=""></li>
-                    <li id="7" class="badgeShadow"><img src="./assets/badge7.png" alt=""></li>
-                    <li id="8" class="badgeShadow"><img src="./assets/badge8.png" alt=""></li>
-                </ul>
-            </div>
-
-            <div class="pokemonContainer">
+            <div class="contentFlex">
+                <!-- Badges to indicate the scores -->
+                <div class="pokemonAndBadges">
+                    <div class="badges">
+                        <ul>
+                            <li id="1" class="badgeShadow"><img src="./assets/badge1.png" alt=""></li>
+                            <li id="2" class="badgeShadow"><img src="./assets/badge2.png" alt="badge 2"></li>
+                            <li id="3" class="badgeShadow"><img src="./assets/badge3.png" alt="badge 3"></li>
+                            <li id="4" class="badgeShadow"><img src="./assets/badge4.png" alt=""></li>
+                            <li id="5" class="badgeShadow"><img src="./assets/badge5.png" alt=""></li>
+                            <li id="6" class="badgeShadow"><img src="./assets/badge6.png" alt=""></li>
+                            <li id="7" class="badgeShadow"><img src="./assets/badge7.png" alt=""></li>
+                            <li id="8" class="badgeShadow"><img src="./assets/badge8.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="pokemonContainer">
                 <img src="" class="pokeImg shadow" alt="">
             </div>
 
@@ -44,12 +44,21 @@
                 <div id="shake">
                     <input class="textBox" type="text" placeholder="Answer here"></input>
                 </div>
-                <button class="buttonhide submit" type="submit">Submit</button>
-                <button class="buttonhide pass">Pass</button>
-                <button class="nextPokemon" type="submit">Next Pokemon</button>
-            </form>
-
-
+                <div class="answerAndButtons">
+                    <div class="answerContainer">
+                        <h2>It's...</h2>
+                        <h2 class="pokemonAnswer"></h2>
+                    </div>
+                    <form>
+                        <div id="shake">
+                            <input class="textBox" type="text" placeholder="Answer here"></input>
+                        </div>
+                        <button class="buttonhide submit" type="submit">Submit</button>
+                        <button class="buttonhide pass">Pass</button>
+                        <button class="nextPokemon" type="submit">Next Pokemon</button>
+                    </form>
+                </div> 
+            </div>
         </header>
     </div>
 
