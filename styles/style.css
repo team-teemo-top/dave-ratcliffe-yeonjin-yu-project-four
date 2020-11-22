@@ -349,73 +349,6 @@ body .badgeShadow {
           filter: contrast(50%) brightness(20%);
 }
 
-<<<<<<< HEAD
-body.masterBody {
-  background-image: radial-gradient(circle, #f2f08b 0%, #e36761 80%);
-}
-
-div.master {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-}
-
-div.master h1 {
-  -webkit-text-stroke: 2px #3b4cca;
-}
-
-div.master p {
-  font-family: 'Nerko One', cursive;
-  color: #343239;
-  font-size: 4rem;
-  letter-spacing: 0px;
-  line-height: 0px;
-  text-shadow: none;
-  font-weight: 400;
-}
-
-div.master img:nth-child(3) {
-  margin-top: 3rem;
-  -webkit-filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
-          filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
-}
-
-div.master p:nth-child(4) {
-  margin-bottom: 0;
-}
-
-div.master a.tryAgain {
-  text-align: center;
-  text-decoration: none;
-  background-color: #ffcb05;
-  color: #395faa;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 800;
-  font-size: 40px;
-  padding: 30px 30px;
-  letter-spacing: 3px;
-  width: 37%;
-}
-
-div.master a.tryAgain:hover {
-  background-color: #395faa;
-  color: #ffcb05;
-}
-
-body.notMasterBody {
-  background-image: radial-gradient(circle, #99d8eb 0%, #343239 80%);
-=======
 body {
   background-color: #e36761;
 }
@@ -493,7 +426,6 @@ button {
   font-size: 1.6rem;
   text-align: center;
   margin-bottom: 10px;
->>>>>>> master
 }
 
 div.notMaster {
