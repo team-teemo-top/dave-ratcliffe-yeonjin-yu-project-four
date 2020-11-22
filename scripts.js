@@ -1,59 +1,3 @@
-// make a button allowing you to start the quiz
-
-//access pokemon api
-
-
-//select random generation 1 pokemon to display on the screen
-
-//style png to create silhouette
-
-
-// make textform for people to submit answer
-
-//allow player to submit when hitting enter
-
-// use prevent default so the page doesn't refresh
-
-// use conditional to give play a point if they are right and display it on the page
-
-// if player is right or wrong, reveal the pokemon
-
-// create "Idk, blasting off again" button so they can skip to the next pokemon if they don't know the answer
-
-//cycle to next pokemon when answered
-
-// Stretch goal:
-
-// make sure there is no duplication of pokemon during the game
-
-// make timer and display/lives
-
-// have landing page animated with text sliding in and "who's that pokemon" sound
-
-//load pokemon on start
-//if correct reveal pokemon and display badge
-//prevent default on form
-//display next button to reveal the next pokemon
-//if incorrect nothing changes
-// if skipped revel pokemon but no badge given and next button appers to go on to the next pokemon
-//clear page and rerun ajax
-// make an array so the badges are displayed
-// use a for each diplay the nadge indvidually with each point
-// make a limit of 8 rounds before the game ends
-// notify game has ended and create a replay button 
-//global counter property 
-
-// Javascript
-
-
-//questions 
-// how to get the value from the ajax into the event callback function
-// how would you go about getting the badges on the screen. Would you use an array and append or just toggle classes with visibility 
-
-
-//testing
-
-
 // app object
 const pokeQuiz = {};
 
@@ -67,11 +11,11 @@ pokeQuiz.nextPokemon = $('.nextPokemon').on('click', (e) => {
     // After clicking .nextPokemon 8 times, redirect user to either:
         // Congratulation page, or the try again page
     if (pokeQuiz.questionCounter === 9) {
-        // if (pokeQuiz.correctQuestion === 8) {
-        //     window.location.href = "pokemonMaster.html"
-        // }else  {
-        //     window.location.href = "notMaster.html"
-        // };
+        if (pokeQuiz.correctQuestion === 8) {
+            window.location.href = "pokemonMaster.html"
+        }else  {
+            window.location.href = "notMaster.html"
+        };
         console.log('the game is over');
         $('h3').html('you finished');
     };
@@ -168,7 +112,7 @@ pokeQuiz.pokeInfo = () => {
 
 
 
-// Initialization
+// Initializations and global variables
 pokeQuiz.init = () => {
     pokeQuiz.pokeInfo();
     pokeQuiz.chosenPokemon = [];

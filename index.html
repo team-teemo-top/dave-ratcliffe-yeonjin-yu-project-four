@@ -9,19 +9,31 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Quicksand:wght@400;500&display=swap"
+        rel="stylesheet">
    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
     <title>WHO'S DAT POKEMON?!?!</title>
 </head>
 
-<body>
+<body class="indexBody">
 
-    <div class="wrapper">
-        <header>
-            <h1>Who's that Pokemon?</h1>
-            <p>Guess the pokemon's name correctly to earn up to Pokemon gym badges!</p>
-            <a href="quiz.html">Earn your gym badges!!</a>
+    <div class="index wrapper">
+        <header class="indexHeader">
+            <h1>Who's dat</h1>
+            <img src="assets/pokemonLogo.png" alt="Pokemon logo" class="pokemonLogo">
+            
+            <img src="assets/badgesAll.png" class="badges">
+            <p>Guess the pokemon's name correctly to earn up to 8 Pokemon gym badges!</p>
+            <a href="quiz.html" class="goQuiz">Earn your gym badges!</a>
         </header>
+        <div class="push"></div>
     </div>
+
+    <footer>
+        <p>Copyright © Dave Ratcliffe | Christina Yu </p>
+        <p>2020 Juno College</p>
+    </footer>
 
 
 
@@ -34,6 +46,7 @@
         integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
 
     <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </body>
 
 </html>
