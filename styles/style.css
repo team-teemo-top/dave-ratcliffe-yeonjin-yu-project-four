@@ -244,7 +244,6 @@ html {
 
 body.indexBody {
   background-image: radial-gradient(circle, #ffb5ad 0%, #e36761 80%);
-  height: 100vh;
 }
 
 header.indexHeader {
@@ -262,6 +261,7 @@ header.indexHeader {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
 }
 
 header.indexHeader h1 {
@@ -282,7 +282,7 @@ header.indexHeader p {
   font-family: "Quicksand", sans-serif;
   font-size: 30px;
   font-weight: 800;
-  width: 32%;
+  width: 35rem;
   color: #343239;
 }
 
@@ -302,7 +302,7 @@ header.indexHeader a.goQuiz {
   font-size: 40px;
   padding: 30px 30px;
   letter-spacing: 3px;
-  width: 37%;
+  width: 35rem;
 }
 
 header.indexHeader a.goQuiz:hover {
@@ -318,7 +318,7 @@ body h1 {
   color: #f2f08b;
   font-size: 6rem;
   font-family: Pokemon, fantasy;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
   text-shadow: 10px 10px 0px #3b4cca;
 }
 
@@ -349,6 +349,73 @@ body .badgeShadow {
           filter: contrast(50%) brightness(20%);
 }
 
+body.masterBody {
+  background-image: radial-gradient(circle, #f2f08b 0%, #e36761 80%);
+}
+
+div.master {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+div.master h1 {
+  -webkit-text-stroke: 2px #3b4cca;
+}
+
+div.master p {
+  font-family: 'Nerko One', cursive;
+  color: #343239;
+  font-size: 4rem;
+  letter-spacing: 0px;
+  line-height: 0px;
+  text-shadow: none;
+  font-weight: 400;
+}
+
+div.master img:nth-child(3) {
+  margin-top: 3rem;
+  -webkit-filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
+          filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
+}
+
+div.master p:nth-child(4) {
+  margin-bottom: 0;
+}
+
+div.master a.tryAgain {
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffcb05;
+  color: #395faa;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  padding: 30px 30px;
+  letter-spacing: 3px;
+  width: 37%;
+}
+
+div.master a.tryAgain:hover {
+  background-color: #395faa;
+  color: #ffcb05;
+}
+
+body.notMasterBody {
+  background-image: radial-gradient(circle, #99d8eb 0%, #343239 80%);
+}
+
 div.notMaster {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,10 +430,25 @@ div.notMaster {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
 }
 
 div.notMaster h1 {
-  font-family: "Quicksand", sans-serif;
+  -webkit-text-stroke: 2px #3b4cca;
+}
+
+div.notMaster p {
+  font-family: 'Nerko One', cursive;
+  color: #343239;
+  font-size: 4rem;
+  letter-spacing: 0px;
+  line-height: 0px;
+  text-shadow: none;
+  font-weight: 400;
+}
+
+div.notMaster p:nth-child(3) {
+  margin-bottom: 0;
 }
 
 div.notMaster a.tryAgain {
@@ -387,11 +469,67 @@ div.notMaster a.tryAgain:hover {
   color: #ffcb05;
 }
 
+@media (max-width: 825px) {
+  header.indexHeader h1 {
+    font-size: 70px;
+    margin-top: 4rem;
+  }
+  header.indexHeader img.pokemonLogo {
+    width: 600px;
+    margin-top: -3rem;
+  }
+}
+
+@media (max-width: 630px) {
+  header.indexHeader h1 {
+    font-size: 70px;
+    margin-top: 0;
+  }
+  header.indexHeader img.pokemonLogo {
+    width: 500px;
+    margin-top: -3rem;
+  }
+  header.indexHeader p {
+    width: 90%;
+  }
+  header.indexHeader img.badges {
+    width: 400px;
+  }
+  header.indexHeader a.goQuiz {
+    padding: 30px 20px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 520px) {
+  header.indexHeader h1 {
+    font-size: 60px;
+    margin-top: 0;
+  }
+  header.indexHeader img.pokemonLogo {
+    width: 300px;
+    margin-top: -1rem;
+  }
+  header.indexHeader p {
+    font-size: 25px;
+    width: 90%;
+  }
+  header.indexHeader img.badges {
+    width: 300px;
+  }
+  header.indexHeader a.goQuiz {
+    padding: 30px 20px;
+    width: 90%;
+  }
+}
+
 footer {
   background-color: #862b21;
   text-align: center;
+  margin-top: 5rem;
+  width: 100%;
 }
 
-div.index {
-  min-height: 100%;
+body {
+  height: 100vh;
 }
