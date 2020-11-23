@@ -638,6 +638,7 @@ div.master a.tryAgain {
   padding: 30px 30px;
   letter-spacing: 3px;
   width: 40rem;
+  margin-bottom: 5rem;
 }
 
 div.master a.tryAgain:hover {
@@ -702,6 +703,7 @@ div.notMaster a.tryAgain {
   padding: 30px 30px;
   letter-spacing: 3px;
   width: 40rem;
+  margin-bottom: 5rem;
 }
 
 div.notMaster a.tryAgain:hover {
@@ -722,6 +724,11 @@ header.indexHeader p {
   font-size: 16px;
   color: white;
   font-family: "Quicksand", sans-serif;
+}
+
+header.indexHeader p a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 520px) {
@@ -958,7 +965,7 @@ header.indexHeader p {
     font-size: 2.5rem;
   }
   .wrapper .pokemonAndBadges .badges {
-    max-width: 500px;
+    width: 400px;
   }
   .wrapper .pokemonAndBadges .pokemonContainer {
     width: 500px;
@@ -986,7 +993,7 @@ header.indexHeader p {
 
 @media screen and (max-width: 609px) {
   .wrapper .pokemonAndBadges .badges ul li {
-    min-width: 10px;
+    min-width: 1px;
   }
   .wrapper .pokemonAndBadges .pokemonContainer {
     width: 450px;
@@ -1019,7 +1026,46 @@ header.indexHeader p {
   form {
     width: 400px;
   }
-  .pokemonAnswer {
+  .alignContainer .answerContainer .pokemonAnswer {
+    text-align: center;
+    font-size: 3rem;
+    height: 6rem;
+  }
+  .wrapper .pokemonAndBadges .badges {
+    width: 290px;
+  }
+  .wrapper .pokemonAndBadges .pokeImg {
+    width: 180px;
+    -webkit-filter: drop-shadow(8px 8px 3px #3b3b3b);
+            filter: drop-shadow(8px 8px 3px #3b3b3b);
+  }
+  .wrapper .pokemonAndBadges .pokemonContainer {
+    width: 300px;
+    height: 300px;
+    border: 50px solid #99d8eb;
+  }
+  .alignContainer {
+    position: absolute;
+    top: 25rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textBox {
+    width: 280px;
+    font-size: 1.2rem;
+  }
+  form {
+    width: 280px;
+  }
+  .buttonsContainer button.quizButtons {
+    font-size: 1.2rem;
+  }
+  .submitContainer button {
+    font-size: 1.2rem;
+  }
+  .alignContainer .answerContainer .pokemonAnswer {
     font-size: 2rem;
+    height: 6rem;
   }
 }

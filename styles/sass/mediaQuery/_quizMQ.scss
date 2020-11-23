@@ -107,7 +107,7 @@
   .wrapper{
     .pokemonAndBadges {
       .badges {
-        max-width: 500px;
+        width: 400px;
       }
       .pokemonContainer {
         width: 500px;
@@ -144,7 +144,7 @@
     .pokemonAndBadges {
       .badges {
         ul li {
-          min-width: 10px;
+          min-width: 1px;
         }
       }
       .pokemonContainer {
@@ -184,8 +184,61 @@
   form {
     width: 400px;
   }
-  .pokemonAnswer {
-    font-size: 2rem;
+  .alignContainer {
+    .answerContainer {
+      .pokemonAnswer {
+        text-align: center;
+        font-size: 3rem;
+        height: 6rem;
+      }
+    }
+  }
+  .wrapper{
+    .pokemonAndBadges {
+      .badges {
+        width: 290px;
+      }
+      .pokeImg {
+        width: 180px;
+        filter: drop-shadow(8px 8px 3px rgb(59, 59, 59));
+      }
+      .pokemonContainer {
+        width: 300px;
+        height: 300px;
+        border: 50px solid $blue;
+      }
+    }
+  }
+  .alignContainer {
+    position: absolute;
+    top: 25rem;
   }
 }
 
+@media screen and (max-width: 500px) {
+  .textBox {
+    width: 280px;
+    font-size: 1.2rem;
+  }
+  form {
+    width: 280px;
+  }
+  .buttonsContainer {
+    button.quizButtons {
+      font-size: 1.2rem;
+    }
+  }
+  .submitContainer {
+    button {
+      font-size: 1.2rem;
+    }
+  }
+  .alignContainer {
+    .answerContainer {
+      .pokemonAnswer {
+        font-size: 2rem;
+        height: 6rem;
+      }
+    }
+  }
+}

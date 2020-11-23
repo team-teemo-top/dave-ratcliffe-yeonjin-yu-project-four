@@ -21,6 +21,7 @@ div.notMaster {
     }
     a.tryAgain {
         @include tryAgain;
+        margin-bottom: 5rem;
     }
     a.tryAgain:hover {
         @include tryAgainHover;
