@@ -10,7 +10,6 @@ pokeQuiz.nextPokemon = $('.nextPokemon').on('click', (e) => {
     if (pokeQuiz.questionCounter === 8) {
         $('.nextPokemon').text('Finish Quiz')
     }
-    // console.log(pokeQuiz.questionCounter);
     // After clicking .nextPokemon 8 times, redirect user to either:
         // Congratulation page, or the try again page
     if (pokeQuiz.questionCounter === 9) {
@@ -19,8 +18,6 @@ pokeQuiz.nextPokemon = $('.nextPokemon').on('click', (e) => {
         }else  {
             window.location.href = "notMaster.html"
         };
-        console.log('the game is over');
-        $('h3').html('you finished');
     };
 });
 
@@ -30,7 +27,6 @@ pokeQuiz.nextPokemon = $('.nextPokemon').on('click', (e) => {
 pokeQuiz.clickCorrect = $('.submit').on('click', (e) => {
     e.preventDefault();
     const lowercasePoke = $('.textBox').val().toLowerCase();
-    console.log(pokeQuiz.name);
     
     // If answer is correct:
     if (lowercasePoke === pokeQuiz.name) {
@@ -40,8 +36,7 @@ pokeQuiz.clickCorrect = $('.submit').on('click', (e) => {
         $(`#${pokeQuiz.questionCounter}`).removeClass('badgeShadow');
         $('.buttonhide').css('display', 'none');
         $('.pokemonAnswer').html(pokeQuiz.name + '!!!');
-        $('.textBox').css('visibility', 'hidden');
-        
+        $('.textBox').css('display', 'none');
         
         // If answer is wrong:
     } else {
@@ -58,8 +53,7 @@ pokeQuiz.clickPass = $('.pass').on('click', (e) => {
     // Reveals the pokemon img and the pokemon name
     $('.nextPokemon').css('visibility', 'visible');
     $('.buttonhide').css('display', 'none');
-    $('.textBox').css('visibility', 'hidden');
-    console.log('this is the pass button')
+    $('.textBox').css('display', 'none');
     $('.pokeImg').removeClass('shadow');
     $('.pokemonAnswer').html(pokeQuiz.name + '!!!');
     // Remove the text input form and replace it with the correct answer ("It's..." + ${pokemon name} + "!!!")
@@ -77,7 +71,7 @@ pokeQuiz.clickNext = $('.nextPokemon').on('click', (e) => {
     pokeQuiz.pokeInfo();
     // Hide the next pokemon once new pokemon loads
     $('.nextPokemon').css('visibility', 'hidden');
-    $('.textBox').css('visibility', 'visible');
+    $('.textBox').css('display', 'initial');
     $('.buttonhide').css('display', 'initial');
     $('.pokemonAnswer').html('');
 });
@@ -109,10 +103,13 @@ pokeQuiz.pokeInfo = () => {
         dataType: 'json'
     }).then((pokemon) => {
         const displayPokemon = pokemon.sprites.front_default;
+        // removes -m and -f from Nidoran
+        if ([29,32].includes(pokemon.id)) {
+            pokemon.name = "nidoran";
+        }
         pokeQuiz.name = pokemon.name;
         // Replace pokemon img src with a random one
         $('.pokeImg').attr('src', displayPokemon);
-        console.log(pokeRandom);
     });
 };
 

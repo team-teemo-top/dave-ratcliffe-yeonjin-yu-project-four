@@ -9,5 +9,9 @@ header.indexHeader {
         font-size: 16px;
         color: white;
         font-family: $qSand;
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 }

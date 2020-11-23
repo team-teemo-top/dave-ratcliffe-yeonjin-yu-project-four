@@ -5,81 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles\style.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link
-        href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon"
-        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet"
+        type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <title>WHO'S DAT POKEMON?!?! - Quiz</title>
 </head>
 
 <body>
 
     <div class="wrapper">
-        <header>
-            <h1 class="whoPokemon">Who's that Pokemon?</h1>
-            <div class="contentFlex">
-                <!-- Badges to indicate the scores -->
-                <div class="pokemonAndBadges">
-                    <div class="badges">
-                        <ul>
-                            <li id="1" class="badgeShadow"><img
-                                    src="./assets/badge1.png" alt=""></li>
-                            <li id="2" class="badgeShadow"><img
-                                    src="./assets/badge2.png" alt="badge 2">
-                            </li>
-                            <li id="3" class="badgeShadow"><img
-                                    src="./assets/badge3.png" alt="badge 3">
-                            </li>
-                            <li id="4" class="badgeShadow"><img
-                                    src="./assets/badge4.png" alt=""></li>
-                            <li id="5" class="badgeShadow"><img
-                                    src="./assets/badge5.png" alt=""></li>
-                            <li id="6" class="badgeShadow"><img
-                                    src="./assets/badge6.png" alt=""></li>
-                            <li id="7" class="badgeShadow"><img
-                                    src="./assets/badge7.png" alt=""></li>
-                            <li id="8" class="badgeShadow"><img
-                                    src="./assets/badge8.png" alt=""></li>
-                        </ul>
-                    </div>
-                    <div class="pokemonContainer">
-                        <img src="" class="pokeImg shadow" alt="">
-                    </div>
+        <h1>Who's that Pokemon?</h1>
+        <div class="contentFlex">
+            <!-- Badges to indicate the scores -->
+            <div class="pokemonAndBadges">
+                <div class="badges">
+                    <ul>
+                        <li id="1" class="badgeShadow"><img src="./assets/badge1.png" alt="badge 1"></li>
+                        <li id="2" class="badgeShadow"><img src="./assets/badge2.png" alt="badge 2">
+                        </li>
+                        <li id="3" class="badgeShadow"><img src="./assets/badge3.png" alt="badge 3">
+                        </li>
+                        <li id="4" class="badgeShadow"><img src="./assets/badge4.png" alt="badge 4"></li>
+                        <li id="5" class="badgeShadow"><img src="./assets/badge5.png" alt="badge 5"></li>
+                        <li id="6" class="badgeShadow"><img src="./assets/badge6.png" alt="badge 6"></li>
+                        <li id="7" class="badgeShadow"><img src="./assets/badge7.png" alt="badge 7"></li>
+                        <li id="8" class="badgeShadow"><img src="./assets/badge8.png" alt="badge 8"></li>
+                    </ul>
                 </div>
-                    <div class="answerAndButtons">
-                        <div class="alignContainer">
-                            <div class="answerContainer">
-                                <h2 class="its">It's...</h2>
-                                <h2 class="pokemonAnswer"></h2>
-                            </div>
-                            <form>
-                                <div id="shake">
-                                    <input class="textBox" type="text"
-                                        placeholder="Answer here"></input>
-                                </div>
-                                <button class="buttonhide submit"
-                                    type="submit">Submit</button>
-                                <button class="buttonhide pass">Pass</button>
-                                <button class="nextPokemon" type="submit">Next
-                                    Pokemon</button>
-                            </form>
-                        </div>
-                    </div>
+                <div class="pokemonContainer">
+                    <img src="" class="pokeImg shadow" alt="Image of Pokemon">
+                </div>
             </div>
-        </header>
+            <div class="alignContainer">
+                <div class="answerContainer">
+                    <h2 class="its">It's...</h2>
+                    <h2 class="pokemonAnswer"></h2>
+                </div>
+                <form>
+                    <div id="shake">
+                        <input class="textBox" type="text" placeholder="Type answer here"></input>
+                    </div>
+                    <div class="buttonsContainer">
+                        <button class="quizButtons buttonhide submit" type="submit">Submit</button>
+                        <button class="quizButtons buttonhide pass">Pass</button>
+                    </div>
+                    <div class="submitContainer">
+                        <button class="nextPokemon" type="submit">Next
+                            Pokemon</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
 
 
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'
-        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0='
-        crossorigin='anonymous'></script>
+        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-        crossorigin="anonymous"></script>
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </body>
 
