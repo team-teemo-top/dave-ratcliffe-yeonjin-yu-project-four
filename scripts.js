@@ -7,6 +7,9 @@ pokeQuiz.nextPokemon = $('.nextPokemon').on('click', (e) => {
     e.preventDefault();
     // Counting up to 8 question (global variable value is set to 1 so questionCounter is set to 9)
     pokeQuiz.questionCounter++;
+    if (pokeQuiz.questionCounter === 8) {
+        $('.nextPokemon').text('Finish Quiz')
+    }
     // console.log(pokeQuiz.questionCounter);
     // After clicking .nextPokemon 8 times, redirect user to either:
         // Congratulation page, or the try again page
@@ -31,8 +34,8 @@ pokeQuiz.clickCorrect = $('.submit').on('click', (e) => {
     
     // If answer is correct:
     if (lowercasePoke === pokeQuiz.name) {
+        pokeQuiz.correctQuestion++;
         $('.nextPokemon').css('visibility', 'visible');
-        
         $('.pokeImg').removeClass('shadow');
         $(`#${pokeQuiz.questionCounter}`).removeClass('badgeShadow');
         $('.buttonhide').css('display', 'none');
@@ -46,7 +49,6 @@ pokeQuiz.clickCorrect = $('.submit').on('click', (e) => {
         $('#shake').effect('shake', {distance:4, times: 3});
     };
 });
-
 
 
 

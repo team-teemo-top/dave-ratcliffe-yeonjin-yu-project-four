@@ -381,6 +381,19 @@ body .answerAndButtons {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .alignContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -729,24 +742,6 @@ header.indexHeader p {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .pokemonAnswer {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 1090px) {
-  .contentFlex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 @media (max-width: 1000px) {
   div.notMaster p {
     font-size: 45px;
@@ -813,5 +808,34 @@ header.indexHeader p {
     padding: 30px 30px;
     letter-spacing: 3px;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .pokemonAnswer {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .contentFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .whoPokemon {
+    font-size: 4rem;
+    text-shadow: 5px 5px 0px #3b4cca;
+    -webkit-text-stroke: 3px #3b4cca;
   }
 }
