@@ -258,7 +258,7 @@ body.indexBody {
   background-image: radial-gradient(circle, #ffb5ad 0%, #e36761 80%);
 }
 
-header.indexHeader {
+main.indexMain {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,10 +273,10 @@ header.indexHeader {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  margin-top: 3rem;
 }
 
-header.indexHeader h1 {
+main.indexMain h1 {
   color: #f2f08b;
   font-family: Pokemon, fantasy;
   letter-spacing: 10px;
@@ -285,12 +285,12 @@ header.indexHeader h1 {
   margin-top: 4rem;
 }
 
-header.indexHeader img.pokemonLogo {
+main.indexMain img.pokemonLogo {
   width: 800px;
   margin-top: -4rem;
 }
 
-header.indexHeader p {
+main.indexMain p {
   font-family: "Quicksand", sans-serif;
   font-size: 30px;
   font-weight: 800;
@@ -298,14 +298,14 @@ header.indexHeader p {
   color: #343239;
 }
 
-header.indexHeader img.badges {
+main.indexMain img.badges {
   width: 500px;
   -webkit-filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
           filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
   margin-top: 2rem;
 }
 
-header.indexHeader a.goQuiz {
+main.indexMain a.goQuiz {
   text-decoration: none;
   background-color: #ffcb05;
   color: #395faa;
@@ -317,7 +317,7 @@ header.indexHeader a.goQuiz {
   width: 35rem;
 }
 
-header.indexHeader a.goQuiz:hover {
+main.indexMain a.goQuiz:hover {
   background-color: #395faa;
   color: #ffcb05;
 }
@@ -539,7 +539,6 @@ div.master {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
 }
 
 div.master h1 {
@@ -549,14 +548,19 @@ div.master h1 {
 div.master p {
   font-family: 'Nerko One', cursive;
   color: #343239;
-  font-size: 4rem;
+  font-size: 55px;
   letter-spacing: 0px;
-  line-height: 0px;
   text-shadow: none;
   font-weight: 400;
+  text-align: center;
+}
+
+div.master img.congratulations {
+  width: 30rem;
 }
 
 div.master img:nth-child(3) {
+  width: 40%;
   margin-top: 3rem;
   -webkit-filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
           filter: contrast(100%) brightness(100%) drop-shadow(3px 3px 0px black);
@@ -564,6 +568,10 @@ div.master img:nth-child(3) {
 
 div.master p:nth-child(4) {
   margin-bottom: 0;
+}
+
+div.master p:nth-child(5) {
+  margin-top: 0;
 }
 
 div.master a.tryAgain {
@@ -576,7 +584,7 @@ div.master a.tryAgain {
   font-size: 40px;
   padding: 30px 30px;
   letter-spacing: 3px;
-  width: 37%;
+  width: 40rem;
 }
 
 div.master a.tryAgain:hover {
@@ -585,7 +593,7 @@ div.master a.tryAgain:hover {
 }
 
 body.notMasterBody {
-  background-image: radial-gradient(circle, #99d8eb 0%, #343239 80%);
+  background-image: radial-gradient(circle, #99d8eb 0%, #807894 80%);
 }
 
 div.notMaster {
@@ -602,25 +610,32 @@ div.notMaster {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
 }
 
 div.notMaster h1 {
   -webkit-text-stroke: 2px #3b4cca;
 }
 
+div.notMaster img.pikachu {
+  width: 30rem;
+}
+
 div.notMaster p {
   font-family: 'Nerko One', cursive;
   color: #343239;
-  font-size: 4rem;
+  font-size: 55px;
   letter-spacing: 0px;
-  line-height: 0px;
   text-shadow: none;
   font-weight: 400;
+  text-align: center;
 }
 
 div.notMaster p:nth-child(3) {
   margin-bottom: 0;
+}
+
+div.notMaster p:nth-child(4) {
+  margin-top: 0;
 }
 
 div.notMaster a.tryAgain {
@@ -633,7 +648,7 @@ div.notMaster a.tryAgain {
   font-size: 40px;
   padding: 30px 30px;
   letter-spacing: 3px;
-  width: 37%;
+  width: 40rem;
 }
 
 div.notMaster a.tryAgain:hover {
@@ -641,55 +656,74 @@ div.notMaster a.tryAgain:hover {
   color: #ffcb05;
 }
 
+header.indexHeader {
+  background-color: #31475f;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+}
+
+header.indexHeader p {
+  font-size: 16px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+}
+
+@media (max-width: 520px) {
+  header.indexHeader {
+    height: 4rem;
+  }
+}
+
 @media (max-width: 825px) {
-  header.indexHeader h1 {
+  main.indexMain h1 {
     font-size: 70px;
     margin-top: 4rem;
   }
-  header.indexHeader img.pokemonLogo {
+  main.indexMain img.pokemonLogo {
     width: 600px;
     margin-top: -3rem;
   }
 }
 
 @media (max-width: 630px) {
-  header.indexHeader h1 {
+  main.indexMain h1 {
     font-size: 70px;
-    margin-top: 0;
   }
-  header.indexHeader img.pokemonLogo {
+  main.indexMain img.pokemonLogo {
     width: 500px;
     margin-top: -3rem;
   }
-  header.indexHeader p {
+  main.indexMain p {
     width: 90%;
   }
-  header.indexHeader img.badges {
+  main.indexMain img.badges {
     width: 400px;
   }
-  header.indexHeader a.goQuiz {
+  main.indexMain a.goQuiz {
     padding: 30px 20px;
     width: 90%;
   }
 }
 
 @media (max-width: 520px) {
-  header.indexHeader h1 {
+  main.indexMain h1 {
     font-size: 60px;
-    margin-top: 0;
   }
-  header.indexHeader img.pokemonLogo {
+  main.indexMain img.pokemonLogo {
     width: 300px;
     margin-top: -1rem;
   }
-  header.indexHeader p {
+  main.indexMain p {
     font-size: 25px;
     width: 90%;
   }
-  header.indexHeader img.badges {
+  main.indexMain img.badges {
     width: 300px;
   }
-  header.indexHeader a.goQuiz {
+  main.indexMain a.goQuiz {
     padding: 30px 20px;
     width: 90%;
   }
@@ -713,13 +747,71 @@ div.notMaster a.tryAgain:hover {
   }
 }
 
-footer {
-  background-color: #862b21;
-  text-align: center;
-  margin-top: 5rem;
-  width: 100%;
+@media (max-width: 1000px) {
+  div.notMaster p {
+    font-size: 45px;
+  }
 }
 
-body {
-  height: 100vh;
+@media (max-width: 793px) {
+  div.notMaster a.tryAgain {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 550px) {
+  div.notMaster h1 {
+    font-size: 50px;
+  }
+  div.notMaster img.pikachu {
+    width: 90%;
+  }
+  div.notMaster p {
+    font-size: 35px;
+  }
+  div.notMaster a.tryAgain {
+    font-size: 32px;
+    padding: 30px 30px;
+    letter-spacing: 3px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  div.master p {
+    font-size: 45px;
+  }
+  div.master img:nth-child(3) {
+    width: 60%;
+  }
+}
+
+@media (max-width: 793px) {
+  div.master a.tryAgain {
+    width: 30rem;
+  }
+  div.master img:nth-child(3) {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  div.master h1 {
+    font-size: 50px;
+  }
+  div.master img.congratulations {
+    width: 90%;
+  }
+  div.master img:nth-child(3) {
+    width: 80%;
+  }
+  div.master p {
+    font-size: 35px;
+  }
+  div.master a.tryAgain {
+    font-size: 32px;
+    padding: 30px 30px;
+    letter-spacing: 3px;
+    width: 90%;
+  }
 }
