@@ -9,4 +9,15 @@
     flex-direction: column;
     align-items: center;
   }
+  h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .whoPokemon {
+    font-size: 4rem;
+    text-shadow: 5px 5px 0px #3b4cca;
+  -webkit-text-stroke: 3px #3b4cca;
+  }
 }

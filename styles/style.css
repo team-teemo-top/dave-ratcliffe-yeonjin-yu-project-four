@@ -381,6 +381,19 @@ body .answerAndButtons {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .alignContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -813,5 +826,16 @@ header.indexHeader p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .whoPokemon {
+    font-size: 4rem;
+    text-shadow: 5px 5px 0px #3b4cca;
+    -webkit-text-stroke: 3px #3b4cca;
   }
 }
