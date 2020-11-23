@@ -1,7 +1,27 @@
 @media screen and (max-width: 1400px) {
   .pokemonAnswer {
-  font-size: 4rem;
+    font-size: 4rem;
+  }
 }
+
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .pokemonAnswer {
+    font-size: 3rem;
+  }
+  .textBox {
+    width: 400px;
+  }
+  form {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 1090px) {
@@ -12,12 +32,160 @@
   h2 {
     text-align: center;
   }
+  .wrapper {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  .wrapper{
+    .pokemonAndBadges {
+      .badges {
+        max-width: 720px;
+      }
+    }
+  }
+  .textBox {
+    width: 600px;
+  }
+  form {
+    width: 600px;
+  }
+  .wrapper {
+    .pokemonContainer {
+      width: 600px;
+      height: 600px;
+      border: 80px solid $blue;
+      margin: 0;
+    }
+    .pokeImg {
+      width: 250px;
+      filter: drop-shadow(8px 8px 3px rgb(59, 59, 59));
+    }
+  }
+  .alignContainer {
+    position: absolute;
+    top: 40rem;
+    .answerContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;align-items: center;
+      text-align: center;
+      .pokemonAnswer {
+        text-align: center;
+        font-size: 5rem;
+        height: 8rem;
+      }
+    }
+  }
+  h2 {
+    display: block;
+    margin: 0;
+  }
+  .submitContainer {
+    button {
+      margin-bottom: 15rem;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .wrapper {
+    h1 {
+      font-size: 3rem;
+      text-shadow: 5px 5px 0px #3b4cca;
+      -webkit-text-stroke: 2px #3b4cca;
+    }
+  }
 }
 
 @media screen and (max-width: 770px) {
-  .whoPokemon {
-    font-size: 4rem;
-    text-shadow: 5px 5px 0px #3b4cca;
-  -webkit-text-stroke: 3px #3b4cca;
+  .wrapper {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .wrapper{
+    .pokemonAndBadges {
+      .badges {
+        max-width: 500px;
+      }
+      .pokemonContainer {
+        width: 500px;
+        height: 500px;
+        border: 60px solid $blue;
+      }
+    }
+  }
+  .alignContainer {
+    top: 33rem;
+    .answerContainer {
+      .pokemonAnswer {
+        text-align: center;
+        font-size: 5rem;
+        height: 8rem;
+      }
+    }
+  }
+  .submitContainer {
+    button {
+      margin-bottom: 15rem;
+    }
+  }
+  .textBox {
+    width: 500px;
+  }
+  form {
+    width: 500px;
   }
 }
+
+@media screen and (max-width: 609px) {
+  .wrapper{
+    .pokemonAndBadges {
+      .badges {
+        ul li {
+          min-width: 10px;
+        }
+      }
+      .pokemonContainer {
+        width: 450px;
+        height: 450px;
+        border: 50px solid $blue;
+      }
+    }
+  }
+  .alignContainer {
+    top: 33rem;
+    .answerContainer {
+      .pokemonAnswer {
+        text-align: center;
+        font-size: 5rem;
+        height: 8rem;
+      }
+    }
+  }
+  .submitContainer {
+    button {
+      margin-bottom: 15rem;
+    }
+  }
+  .textBox {
+    width: 400px;
+  }
+  form {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textBox {
+    width: 400px;
+  }
+  form {
+    width: 400px;
+  }
+  .pokemonAnswer {
+    font-size: 2rem;
+  }
+}
+

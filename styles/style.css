@@ -255,7 +255,7 @@ html {
 }
 
 body.indexBody {
-  background-image: radial-gradient(circle, #ffb5ad 0%, #e36761 80%);
+  background-image: radial-gradient(circle, #ffb2ae 0%, #e36761 80%);
 }
 
 main.indexMain {
@@ -315,6 +315,7 @@ main.indexMain a.goQuiz {
   padding: 30px 30px;
   letter-spacing: 3px;
   width: 35rem;
+  margin-bottom: 5rem;
 }
 
 main.indexMain a.goQuiz:hover {
@@ -323,30 +324,32 @@ main.indexMain a.goQuiz:hover {
 }
 
 body {
-  background-color: #e36761;
+  background-color: #f88a84;
 }
 
-body h1 {
+.wrapper h1 {
   color: #f2f08b;
-  font-size: 7rem;
+  font-size: 6rem;
   font-family: Pokemon, fantasy;
   letter-spacing: 6px;
   text-shadow: 10px 10px 0px #3b4cca;
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  -webkit-text-stroke: 3px #3b4cca;
 }
 
-body .contentFlex {
+.wrapper .contentFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 100px;
 }
 
-body .pokemonAndBadges {
-  width: 50%;
+.wrapper .pokemonAndBadges {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,20 +362,20 @@ body .pokemonAndBadges {
           align-items: center;
 }
 
-body .pokemonAndBadges .badges {
-  max-width: 450px;
+.wrapper .pokemonAndBadges .badges {
+  max-width: 520px;
 }
 
-body .pokemonAndBadges .badges ul {
+.wrapper .pokemonAndBadges .badges ul {
   padding: 0;
 }
 
-body .pokemonAndBadges .badges ul li {
+.wrapper .pokemonAndBadges .badges ul li {
   width: calc(100% / 8);
   min-width: 56.25px;
 }
 
-body .answerAndButtons {
+.wrapper .answerAndButtons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,7 +389,7 @@ body .answerAndButtons {
           align-items: center;
 }
 
-body .alignContainer {
+.wrapper .alignContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,15 +397,15 @@ body .alignContainer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .pokemonContainer {
+.wrapper .pokemonContainer {
   background: white;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,48 +416,35 @@ body .pokemonContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 45px solid #99d8eb;
+  border: 60px solid #99d8eb;
+  margin-bottom: 8rem;
 }
 
-body .pokeImg {
+.wrapper .pokeImg {
   width: 250px;
   -webkit-filter: drop-shadow(8px 8px 3px #3b3b3b);
           filter: drop-shadow(8px 8px 3px #3b3b3b);
 }
 
-body .shadow {
+.wrapper .shadow {
   -webkit-filter: contrast(0%) brightness(0%);
           filter: contrast(0%) brightness(0%);
 }
 
-body .nextPokemon {
+.wrapper .nextPokemon {
   visibility: hidden;
-  width: 400px;
 }
 
-body .badges ul {
+.wrapper .badges ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .badgeShadow {
+.wrapper .badgeShadow {
   -webkit-filter: contrast(50%) brightness(20%);
           filter: contrast(50%) brightness(20%);
-}
-
-body {
-  background-color: #e36761;
-}
-
-h1 {
-  color: #f2f08b;
-  font-size: 6rem;
-  font-family: Pokemon, fantasy;
-  letter-spacing: 6px;
-  text-shadow: 10px 10px 0px #3b4cca;
-  -webkit-text-stroke: 7px #3b4cca;
 }
 
 h2 {
@@ -464,20 +454,17 @@ h2 {
   letter-spacing: 4px;
   font-family: Pokemon, fantasy;
   text-shadow: 5px 5px 0px #3b4cca;
-  -webkit-text-stroke: 3px #3b4cca;
-  margin: 0;
-  margin-bottom: 70px;
+  -webkit-text-stroke: 2px #3b4cca;
 }
 
 .its {
-  margin-top: 20px;
+  margin-top: 5rem;
 }
 
 .pokemonAnswer {
   text-transform: capitalize;
   font-size: 5rem;
-  height: 158.4px;
-  width: 381.65px;
+  height: 5rem;
 }
 
 .pokeImg {
@@ -507,31 +494,84 @@ h2 {
           filter: contrast(50%) brightness(20%);
 }
 
-button {
-  padding: 15px;
+.buttonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.buttonsContainer button.quizButtons {
+  display: inline-block;
+  padding: 24px 15px;
   border: none;
   background-color: #f2f08b;
   color: #343239;
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
-  margin-bottom: 100px;
-}
-
-.buttonhide {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
   width: calc((100% / 2) - 10px);
 }
 
+.buttonsContainer button.quizButtons:hover {
+  background-color: #395faa;
+  color: #f2f08b;
+}
+
+.buttonsContainer button.submit {
+  margin-right: 10px;
+}
+
+.submitContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.submitContainer button {
+  display: inline-block;
+  padding: 28px 50px;
+  border: none;
+  background-color: #f2f08b;
+  color: #343239;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  width: 100%;
+}
+
+.submitContainer button:hover {
+  background-color: #395faa;
+  color: #f2f08b;
+}
+
 .textBox {
-  padding: 15px;
-  width: 403px;
+  padding: 35px 15px 15px 15px;
+  width: 500px;
   height: 50;
   font-size: 1.6rem;
   text-align: center;
   margin-bottom: 10px;
+  color: #343239;
+  letter-spacing: 0.3rem;
 }
 
 form {
-  width: 420px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body.masterBody {
@@ -817,6 +857,24 @@ header.indexHeader p {
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .wrapper h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .pokemonAnswer {
+    font-size: 3rem;
+  }
+  .textBox {
+    width: 400px;
+  }
+  form {
+    width: 400px;
+  }
+}
+
 @media screen and (max-width: 1090px) {
   .contentFlex {
     -webkit-box-orient: vertical;
@@ -830,12 +888,138 @@ header.indexHeader p {
   h2 {
     text-align: center;
   }
+  .wrapper h1 {
+    font-size: 4rem;
+  }
+  .wrapper .pokemonAndBadges .badges {
+    max-width: 720px;
+  }
+  .textBox {
+    width: 600px;
+  }
+  form {
+    width: 600px;
+  }
+  .wrapper .pokemonContainer {
+    width: 600px;
+    height: 600px;
+    border: 80px solid #99d8eb;
+    margin: 0;
+  }
+  .wrapper .pokeImg {
+    width: 250px;
+    -webkit-filter: drop-shadow(8px 8px 3px #3b3b3b);
+            filter: drop-shadow(8px 8px 3px #3b3b3b);
+  }
+  .alignContainer {
+    position: absolute;
+    top: 40rem;
+  }
+  .alignContainer .answerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .alignContainer .answerContainer .pokemonAnswer {
+    text-align: center;
+    font-size: 5rem;
+    height: 8rem;
+  }
+  h2 {
+    display: block;
+    margin: 0;
+  }
+  .submitContainer button {
+    margin-bottom: 15rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .wrapper h1 {
+    font-size: 3rem;
+    text-shadow: 5px 5px 0px #3b4cca;
+    -webkit-text-stroke: 2px #3b4cca;
+  }
 }
 
 @media screen and (max-width: 770px) {
-  .whoPokemon {
-    font-size: 4rem;
-    text-shadow: 5px 5px 0px #3b4cca;
-    -webkit-text-stroke: 3px #3b4cca;
+  .wrapper h1 {
+    font-size: 2.5rem;
+  }
+  .wrapper .pokemonAndBadges .badges {
+    max-width: 500px;
+  }
+  .wrapper .pokemonAndBadges .pokemonContainer {
+    width: 500px;
+    height: 500px;
+    border: 60px solid #99d8eb;
+  }
+  .alignContainer {
+    top: 33rem;
+  }
+  .alignContainer .answerContainer .pokemonAnswer {
+    text-align: center;
+    font-size: 5rem;
+    height: 8rem;
+  }
+  .submitContainer button {
+    margin-bottom: 15rem;
+  }
+  .textBox {
+    width: 500px;
+  }
+  form {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 609px) {
+  .wrapper .pokemonAndBadges .badges ul li {
+    min-width: 10px;
+  }
+  .wrapper .pokemonAndBadges .pokemonContainer {
+    width: 450px;
+    height: 450px;
+    border: 50px solid #99d8eb;
+  }
+  .alignContainer {
+    top: 33rem;
+  }
+  .alignContainer .answerContainer .pokemonAnswer {
+    text-align: center;
+    font-size: 5rem;
+    height: 8rem;
+  }
+  .submitContainer button {
+    margin-bottom: 15rem;
+  }
+  .textBox {
+    width: 400px;
+  }
+  form {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textBox {
+    width: 400px;
+  }
+  form {
+    width: 400px;
+  }
+  .pokemonAnswer {
+    font-size: 2rem;
   }
 }

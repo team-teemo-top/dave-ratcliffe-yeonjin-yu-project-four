@@ -1,5 +1,5 @@
 body.indexBody {
-    background-image: radial-gradient(circle, $bgPinkLight 0%, $bgPink 80%);
+    background-image: radial-gradient(circle, $bgPinkLight2 0%, $bgPink 80%);
 }
 
 main.indexMain {
@@ -44,7 +44,7 @@ main.indexMain {
         padding: 30px 30px;
         letter-spacing: 3px;
         width: 35rem;
-        // margin-bottom: -13rem;
+        margin-bottom: 5rem;
     }
     a.goQuiz:hover {
         background-color: $pokeBlue;
