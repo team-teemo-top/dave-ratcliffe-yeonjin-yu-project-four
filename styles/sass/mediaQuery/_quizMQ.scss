@@ -50,17 +50,15 @@
   form {
     width: 600px;
   }
-  .wrapper {
-    .pokemonContainer {
-      width: 600px;
-      height: 600px;
-      border: 80px solid $blue;
-      margin: 0;
-    }
-    .pokeImg {
-      width: 250px;
-      filter: drop-shadow(8px 8px 3px rgb(59, 59, 59));
-    }
+  .pokemonContainer {
+    width: 600px;
+    height: 600px;
+    border: 80px solid $blue;
+    margin: 0;
+  }
+  .pokeImg {
+    width: 250px;
+    filter: drop-shadow(8px 8px 3px rgb(59, 59, 59));
   }
   .alignContainer {
     position: absolute;

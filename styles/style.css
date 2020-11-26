@@ -907,13 +907,13 @@ header.indexHeader p a {
   form {
     width: 600px;
   }
-  .wrapper .pokemonContainer {
+  .pokemonContainer {
     width: 600px;
     height: 600px;
     border: 80px solid #99d8eb;
     margin: 0;
   }
-  .wrapper .pokeImg {
+  .pokeImg {
     width: 250px;
     -webkit-filter: drop-shadow(8px 8px 3px #3b3b3b);
             filter: drop-shadow(8px 8px 3px #3b3b3b);
